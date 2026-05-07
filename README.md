@@ -45,15 +45,15 @@ pip install web3
 
 在 `config.py` 中填入以下内容：
 ```python
-# config.py
+ config.py
 
-# 你的 Infura RPC 节点地址
+ 你的 Infura RPC 节点地址
 WEB3_PROVIDER = "https://sepolia.infura.io/v3/你的Infura项目ID"
 
-# 智能合约地址
+ 智能合约地址
 CONTRACT_ADDRESS = "0x449CBAF621E7b28577530779395C182b1398D725"
 
-# 你的钱包私钥（⚠️ 注意：不要加 0x 前缀，且确保该测试钱包内有 Sepolia ETH 余额）
+ 你的钱包私钥（⚠️ 注意：不要加 0x 前缀，且确保该测试钱包内有 Sepolia ETH 余额）
 PRIVATE_KEY = "你的钱包私钥"   
 ```
 > **💡 提示**：如果你的钱包中没有 Sepolia 测试币 (Sepolia ETH)，请前往 [Sepolia Faucet](https://sepoliafaucet.com/) 免费领取。
@@ -113,13 +113,13 @@ python verify_hash.py
 
 ```text
 geospatial-data-blockchain/
-├── config.py               # ⚙️ 敏感配置（仅本地存在，不提交）
-├── upload_hash.py          # 📤 上传存证脚本
-├── verify_hash.py          # 🔍 验证比对脚本
-├── .gitignore              # 🙈 Git 忽略规则
+├── config.py                ⚙️ 敏感配置（仅本地存在，不提交）
+├── upload_hash.py           📤 上传存证脚本
+├── verify_hash.py           🔍 验证比对脚本
+├── .gitignore               🙈 Git 忽略规则
 ├── data/
-│   └── elevation_sample.csv   # 📊 待存证的地理空间数据样本
-└── screenshots/            # 🖼️ 运行截图目录（可选）
+│   └── elevation_sample.csv    📊 待存证的地理空间数据样本
+└── screenshots/             🖼️ 运行截图目录（可选）
 ```
 
 ## 🗺️ 八、未来改进方向 (Roadmap)
