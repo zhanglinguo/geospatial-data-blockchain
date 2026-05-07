@@ -1,16 +1,16 @@
-\ 🌍 地理空间数据区块链存证系统
+🌍 地理空间数据区块链存证系统
 
-\(Geospatial Data Blockchain Notarization System)\
+(Geospatial Data Blockchain Notarization System)
 
 
 
-!\[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-!\[Solidity](https://img.shields.io/badge/Solidity-%5E0.8.8-363636.svg)
+[Solidity](https://img.shields.io/badge/Solidity-%5E0.8.8-363636.svg)
 
-!\[Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+[Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 
-!\[Network](https://img.shields.io/badge/Network-Sepolia-lightgrey.svg)
+[Network](https://img.shields.io/badge/Network-Sepolia-lightgrey.svg)
 
 
 
@@ -18,11 +18,10 @@
 
 
 
-\---
 
 
 
-\📖 一、项目背景
+📖 一、项目背景
 
 
 
@@ -42,11 +41,11 @@
 
 
 
-\⚙️ 三、环境配置
+⚙️ 三、环境配置
 
 
 
-\ 1. 克隆仓库
+1. 克隆仓库
 
 将本项目克隆到本地机器并进入项目目录：
 
@@ -60,7 +59,7 @@ cd geospatial-data-blockchain
 
 
 
-\ 2. 安装依赖
+2. 安装依赖
 
 确保本地已安装 Python 3 环境，然后安装 Web3.py 库：
 
@@ -72,7 +71,7 @@ pip install web3
 
 
 
-\ 3. 配置敏感信息（⚠️ 重要）
+3. 配置敏感信息（⚠️ 重要）
 
 在项目根目录创建 `config.py` 文件。该文件已被加入 `.gitignore`，\*\*请勿将其提交到公开仓库\*\*以免泄露私钥。
 
@@ -82,37 +81,37 @@ pip install web3
 
 ```python
 
-\ config.py
+config.py
 
 
 
-\ 你的 Infura RPC 节点地址
+你的 Infura RPC 节点地址
 
 WEB3\_PROVIDER = "https://sepolia.infura.io/v3/你的Infura项目ID"
 
 
 
-\ 智能合约地址
+智能合约地址
 
 CONTRACT\_ADDRESS = "0x449CBAF621E7b28577530779395C182b1398D725"
 
 
 
-\ 你的钱包私钥（⚠️ 注意：不要加 0x 前缀，且确保该测试钱包内有 Sepolia ETH 余额）
+你的钱包私钥（⚠️ 注意：不要加 0x 前缀，且确保该测试钱包内有 Sepolia ETH 余额）
 
 PRIVATE\_KEY = "你的钱包私钥"   
 
 ```
 
-> \\💡 提示\\：如果你的钱包中没有 Sepolia 测试币 (Sepolia ETH)，请前往 \[Sepolia Faucet](https://sepoliafaucet.com/) 免费领取。
+💡 提示：如果你的钱包中没有 Sepolia 测试币 (Sepolia ETH)，请前往 \[Sepolia Faucet](https://sepoliafaucet.com/) 免费领取。
 
 
 
-\ 🚀 四、运行测试
+🚀 四、运行测试
 
 
 
-\ 1. 上传文件哈希（需消耗 Gas 费）
+1. 上传文件哈希（需消耗 Gas 费）
 
 运行上传脚本，系统将计算目标数据文件的哈希值，并将其打包成交易发送到区块链上。
 
@@ -122,7 +121,7 @@ python upload\_hash.py
 
 ```
 
-\\✅ 成功输出示例：\\
+✅ 成功输出示例：
 
 ```text
 
@@ -138,7 +137,7 @@ python upload\_hash.py
 
 
 
-\ 2. 验证文件完整性（免费查询）
+2. 验证文件完整性（免费查询）
 
 运行验证脚本，系统会重新计算本地文件的哈希，并去链上查询是否存在及对应的时间戳。
 
@@ -148,7 +147,7 @@ python verify\_hash.py
 
 ```
 
-\\✅ 成功输出示例：\\
+✅ 成功输出示例：
 
 ```text
 
@@ -160,7 +159,7 @@ python verify\_hash.py
 
 
 
-\ 🛡️ 五、防篡改检测测试
+🛡️ 五、防篡改检测测试
 
 
 
@@ -168,11 +167,11 @@ python verify\_hash.py
 
 
 
-1\. 打开 `data/elevation\_sample.csv` 文件。
+1. 打开 `data/elevation/_sample.csv` 文件。
 
-2\. 随意修改其中的\*\*任意一个数据或字符\*\*并保存。
+2. 随意修改其中的任意一个数据或字符并保存。
 
-3\. 再次运行验证脚本：
+3. 再次运行验证脚本：
 
 &#x20;  ```bash
 
@@ -180,7 +179,7 @@ python verify\_hash.py
 
 &#x20;  ```
 
-4\. \\❌ 预期输出：\\
+4. ❌ 预期输出：
 
 &#x20;  ```text
 
@@ -190,11 +189,11 @@ python verify\_hash.py
 
 
 
-\📜 六、核心合约说明
+📜 六、核心合约说明
 
 
 
-\- \\合约地址\\:\[`0x449CBAF621E7b28577530779395C182b1398D725`](https://sepolia.etherscan.io/address/0x449CBAF621E7b28577530779395C182b1398D725) (点击在 Sepolia Etherscan 上查看)
+合约地址:[0x449CBAF621E7b28577530779395C182b1398D725](https://sepolia.etherscan.io/address/0x449CBAF621E7b28577530779395C182b1398D725) (点击在 Sepolia Etherscan 上查看)
 
 
 
@@ -210,11 +209,7 @@ python verify\_hash.py
 
 
 
-\ 📂 七、项目结构
-
-
-
-```text
+📂 七、项目结构
 
 geospatial-data-blockchain/
 
@@ -236,27 +231,27 @@ geospatial-data-blockchain/
 
 
 
-\ 🗺️ 八、未来改进方向 (Roadmap)
+🗺️ 八、未来改进方向 (Roadmap)
 
 
 
-\- \[ ] \*\*支持批量存证\*\*：优化脚本，支持一次性对整个文件夹内的多个数据文件进行哈希上链。
+支持批量存证：优化脚本，支持一次性对整个文件夹内的多个数据文件进行哈希上链。
 
-\- \[ ] \*\*可视化 Web 界面\*\*：开发基于 React + Web3.js / Ethers.js 的前端面板，降低使用门槛。
+可视化 Web 界面：开发基于 React + Web3.js / Ethers.js 的前端面板，降低使用门槛。
 
-\-\[ ] \*\*IPFS 深度集成\*\*：不仅存证哈希，还将大体积的 GIS 原始文件存储至 IPFS 分布式网络。
+IPFS 深度集成：不仅存证哈希，还将大体积的 GIS 原始文件存储至 IPFS 分布式网络。
 
-\- \[ ] \*\*多链支持\*\*：将智能合约部署并兼容 Polygon、Arbitrum 等低 Gas 且高吞吐的二层（L2）网络。
-
-
-
-\ 📄 九、许可证与联系方式
+多链支持：将智能合约部署并兼容 Polygon、Arbitrum 等低 Gas 且高吞吐的二层（L2）网络。
 
 
 
-\- \*\*开源协议\*\*：本项目基于 \[MIT License](./LICENSE) 开源。
+📄 九、许可证与联系方式
 
-\- \*\*项目作者\*\*：\[zhanglinguo](https://github.com/zhanglinguo)
 
-\- \*\*问题反馈\*\*：欢迎提交 \[Issues](https://github.com/zhanglinguo/geospatial-data-blockchain/issues) 或 Pull Requests 进行技术交流探讨！
+
+开源协议：本项目基于 [MIT License](.LICENSE) 开源。
+
+项目作者：[zhanglinguo](https://github.com/zhanglinguo)
+
+问题反馈：欢迎提交 \[Issues](https://github.com/zhanglinguo/geospatial-data-blockchain/issues) 或 Pull Requests 进行技术交流探讨！
 
